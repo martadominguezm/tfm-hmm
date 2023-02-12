@@ -18,33 +18,47 @@
     </head>
     <body>
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container px-4 px-lg-5">
                 <a class="navbar-brand" href="index.html">Sportland</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                        <li class="nav-item dropdown">
+                        <!-- SignIn y SignUp-->
+                        <li class="nav-item logged-out" style="display: none;">
+                          <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#signinModal">SigIn</a>
+                        </li>
+                        <li class="nav-item logged-out" style="display: none;">
+                          <a type= "button" class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#signupModal">SignUp</a>
+                        </li>
+                        <!-- Tienda/Deportes y Favoritos-->
+                        <li class="nav-item logged-in dropdown">
                             <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tienda</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="deportes.html">Deportes</a></li>
                             
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Favoritos</a></li>
-                        
+                        <li class="nav-item logged-in">
+                          <a class="nav-link active" aria-current="page" href="#!">Favoritos</a>
+                        </li>
+                        <!-- LogOut-->
+                        <li class="nav-item logged-in" style="display: none;">
+                          <a class="nav-link" href="#" id ="logout">LogOut</a>
+                        </li>
                     </ul>
-                    <form class="d-flex">
-                        
+
+                    <!-- Carrito  <form class="d-flex">-->
+                    <form class="nav-item logged-in">
                         <button class="btn btn-outline-dark" type="submit">
                             <i class="bi-cart-fill me-1"></i>
                             Cart
                             <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
                         </button>
                     </form>
-                </div>
+                  </div>
             </div>
-        </nav>
+          </nav>
         
         
            <!-- Header-->
@@ -224,7 +238,5 @@
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
     </body>
 </html>
