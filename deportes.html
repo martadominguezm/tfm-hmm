@@ -18,20 +18,27 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container px-4 px-lg-5">
                 <a class="navbar-brand" href="index.html">Sportland</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                  
-                    
-                    <form class="d-flex">
-                        
-                        <button class="btn btn-outline-dark" type="submit">
-                            <i class="bi-cart-fill me-1"></i>
-                            Cart
-                            <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
-                        </button>
-                    </form>
-                </div>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+    
+                  <!-- Tiempo-->
+                 <li class="nav-item logged-in"><a id="btn-tiempo" class="nav-link active" aria-current="page" href="tiempo.html">Tiempo</a></li>
+    
+                  <!-- LogOut-->
+                  <li class="nav-item logged-in" style="display: none;">
+                    <a class="nav-link" href="#" id ="logout">LogOut</a>
+                  </li>
+                </ul>
+                <!-- Carrito-->
+                <form class="nav-item logged-in">
+                  <a id="btn-carrito" class="nav-link active my-2 my-lg-0" aria-current="page" href="carrito.html">Carrito</a>
+                </form>
+              </div>
             </div>
-        </nav>
+          </nav>
         <!-- Header-->
         <header class="bg-dark py-2">
             <div class="container px-4 px-lg-5 my-5">
